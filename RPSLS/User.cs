@@ -4,7 +4,8 @@ using System.Text;
 
 namespace RPSLS
 {
-    class Player2 : Player
+    class User : Player
     {
+
     }
 }
