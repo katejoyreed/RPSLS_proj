@@ -4,15 +4,17 @@ using System.Text;
 
 namespace RPSLS
 {
-    class Move
+    public class Move
     {
         //member variables
-        string gestureName;
+        public string gestureName;
+        public double value;
 
         //ctor
-        public Move(string gestureName)
+        public Move(string gestureName, double value)
         {
             this.gestureName = gestureName;
+            this.value = value;
         }
 
         //member methods

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RPSLS
 {
-    class Movelist
+    public class Movelist
     {//member variable
         public List<Move> moveList;
 
@@ -18,9 +18,9 @@ namespace RPSLS
 
         //create move
 
-        public Move CreateMove(string gestureName) 
+        public Move CreateMove(string gestureName, double value) 
         {
-           Move move = new Move(gestureName);
+           Move move = new Move(gestureName, value);
             return move;
         }
         //populate movelist
