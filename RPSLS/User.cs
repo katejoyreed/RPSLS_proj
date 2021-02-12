@@ -8,17 +8,17 @@ namespace RPSLS
     {
         
 
-        public User(string userName, double score)   
+        public User()   
         {
             
             
         }
-        public  int ChooseGesture(Movelist movelist)
+        public  int ChooseGesture(Movelist gestures)
         {
             Console.WriteLine("Select your gesture:");
-            for (int i = 0; i < movelist.moveList.Count; i++)
+            for (int i = 0; i < gestures.gestures.Count; i++)
             {
-                Console.WriteLine("Press " + i + " for " + movelist.moveList[i]);
+                Console.WriteLine("Press " + i + " for " + gestures.gestures[i].gestureName);
             }
             int userInput = Int32.Parse(Console.ReadLine());
             return userInput;

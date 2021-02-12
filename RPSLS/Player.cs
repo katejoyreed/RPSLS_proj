@@ -12,9 +12,9 @@ namespace RPSLS
         
 
         //ctor
-        public Player(string userName)
+        public Player()
         {
-            this.userName = userName;
+            
             score = 0;
         }
         //member methods
@@ -26,12 +26,12 @@ namespace RPSLS
 
 
         //Can gain points in a round
-        public abstract void WinRound();
+        
 
 
 
         //Can win or lose a round
-        public abstract void LoseRound();
+        
 
         //Can win or lose a game
     }

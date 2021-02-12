@@ -6,11 +6,11 @@ namespace RPSLS
 {
     public class Movelist
     {//member variable
-        public List<Move> moveList;
+        public List<Move> gestures;
 
         public Movelist()
         {
-            moveList = new List<Move>();
+            gestures = new List<Move>();
         }
 
 
@@ -26,7 +26,7 @@ namespace RPSLS
         //populate movelist
         public void PopulateMovelist(Move move) 
         {
-            moveList.Add(move);
+            gestures.Add(move);
         }
 
 
