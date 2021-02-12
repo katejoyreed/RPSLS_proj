@@ -15,6 +15,7 @@ namespace RPSLS
         {
             this.gestureName = gestureName;
             this.value = value;
+            
         }
 
         //member methods
