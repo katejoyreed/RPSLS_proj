@@ -13,29 +13,34 @@ namespace RPSLS
             score = 0;
         }
 
-        public void ChooseGesture(Movelist gestures) 
+        public Move ChooseGesture() 
         {
             var random = new Random();
             int index = random.Next(gestures.gestures.Count);
-            if (index == gestures.gestures[0].value) 
+            if (index == 0) 
             {
                 UseRock();
+                return gestures.gestures[0];
             }
-            else if (index == gestures.gestures[1].value)
+            else if (index == 1)
             {
                 UsePaper();
+                return gestures.gestures[1];
             }
-            else if (index == gestures.gestures[2].value)
+            else if (index == 2)
             {
                 UseScissors();
+                return gestures.gestures[2];
             }
-            else if (index == gestures.gestures[3].value)
+            else if (index == 3)
             {
                 UseLizard();
+                return gestures.gestures[3];
             }
-            else if (index == gestures.gestures[4].value)
+            else if (index == 4)
             {
                 UseSpock();
+                return gestures.gestures[4];
             }
         }
     }

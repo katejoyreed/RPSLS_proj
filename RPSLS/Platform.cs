@@ -7,7 +7,11 @@ namespace RPSLS
     class Platform
     {
         //start a game
-        Player playerOne = new User();
+        User playerOne = new User();
+        User player1 = new User();
+        Movelist gestures = new Movelist();
+        
+        
 
         //display rules
         public void DisplayRules() 
@@ -67,11 +71,16 @@ namespace RPSLS
             int userInput = Int32.Parse(Console.ReadLine());
             if (userInput == 0)
             {
-                Player playerTwo = new AI();
+                AI playerTwo = new AI();
             }
             else if (userInput == 1)
             {
-                Player playerTwo = new User();
+                User playerTwo = new User();
+            }
+            else 
+            {
+                Console.WriteLine("Please make a valid selection");
+                ChoosePlayers();
             }
         }
         //choose number of rounds (best two of three or more)
@@ -87,17 +96,17 @@ namespace RPSLS
 
         }
 
-        public void CompareGestures(Player playerOme, Player playerTwo)
+        public void CompareGestures(User playerOne, Player playerTwo)
         {
-
-            if(playerOne.gestures == "Rock")
+            if (playerOne.ChooseGesture() == gestures.gestures[0])
             {
-              if(playerTwo.gesture == "Paper" || playerTwo.gesture == "Spock") 
-              {
-                    Console.WriteLine("Player two wins this round!");
-                    playerTwo.
-              }
+                if (playerTwo.ChooseGesture() == gestures.gestures[1] || playerTwo.ChooseGesture () == gestures.gestures[4])
+                {
+                    Console.WriteLine("Player Two wins this round!");
+                    playerTwo.score++;
+                }
             }
+            
             //rock > scissors
             //scissors > paper
             //paper > rock
