@@ -10,15 +10,17 @@ namespace RPSLS
         public string userName;
         public double score;
         
+        
 
         //ctor
         public Player()
         {
-            
             score = 0;
+            
+            
         }
         //member methods
-
+        
 
         public void UseRock()
         {
@@ -43,7 +45,7 @@ namespace RPSLS
             Console.WriteLine(userName + "used Spock!");
         }
 
-
+        
 
 
 

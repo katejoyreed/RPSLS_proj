@@ -18,8 +18,8 @@ namespace RPSLS
 
         //create move
 
-        public Move CreateMove(string gestureName, double value) 
-        {
+        public Move CreateMove(string gestureName, double value) //ghoul, goblin, troll, wizard, Kate
+        {                                                         //rock, paper, scissors, lizard, spock  
            Move move = new Move(gestureName, value);
             return move;
         }

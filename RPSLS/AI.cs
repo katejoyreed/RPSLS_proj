@@ -9,7 +9,8 @@ namespace RPSLS
 
         public AI()
         {
-
+            userName = "Computer";
+            score = 0;
         }
 
         public void ChooseGesture(Movelist gestures) 

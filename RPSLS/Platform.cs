@@ -7,6 +7,7 @@ namespace RPSLS
     class Platform
     {
         //start a game
+        Player playerOne = new User();
 
         //display rules
         public void DisplayRules() 
@@ -60,34 +61,51 @@ namespace RPSLS
         //choose number of players
         public void ChoosePlayers()
         {
-
+            Console.WriteLine("How would you like to play?");
+            Console.WriteLine("Press 0 to play against the computer");
+            Console.WriteLine("Press 1 to play against another person");
+            int userInput = Int32.Parse(Console.ReadLine());
+            if (userInput == 0)
+            {
+                Player playerTwo = new AI();
+            }
+            else if (userInput == 1)
+            {
+                Player playerTwo = new User();
+            }
         }
         //choose number of rounds (best two of three or more)
-        public void ChooseRounds()
+        public int ChooseRounds()
         {
-
+            Console.WriteLine("How many rounds would you like to play?");
+            
         }
         //fight
         public void Fight() 
         {
-            Movelist gestures = new Movelist();
-            Move rock = new Move("Rock", 0);
-            Move paper = new Move("Paper", 1);
-            Move scissors = new Move("Scissors", 2);
-            Move lizard = new Move("Lizard", 3);
-            Move spock = new Move("Spock", 4);
-            gestures.gestures.Add(rock);
-            gestures.gestures.Add(paper);
-            gestures.gestures.Add(scissors);
-            gestures.gestures.Add(lizard);
-            gestures.gestures.Add(spock);
-            User player1 = new User();
-            AI computer = new AI();
-            DisplayRules();
-            player1.ChooseGesture(gestures, player1);
-            computer.ChooseGesture(gestures);
+            
 
         }
-        //game flow here on loop for number set by ChooseRounds method
+
+        public void CompareGestures(Player playerOme, Player playerTwo)
+        {
+
+            if(playerOne.gestures == "Rock")
+            {
+              if(playerTwo.gesture == "Paper" || playerTwo.gesture == "Spock") 
+              {
+                    Console.WriteLine("Player two wins this round!");
+                    playerTwo.
+              }
+            }
+            //rock > scissors
+            //scissors > paper
+            //paper > rock
+            //rock > lizard
+            //lizard > paper
+            //paper > spock
+            //spock > paper
+        }
+        
     }
 }

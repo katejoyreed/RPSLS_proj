@@ -10,10 +10,10 @@ namespace RPSLS
 
         public User()   
         {
-            
-            
+            score = 0;
+           
         }
-        public  void ChooseGesture(Movelist gestures, Player player)
+        public  Move ChooseGesture()
         {
             Console.WriteLine("Select your gesture:");
             for (int i = 0; i < gestures.gestures.Count; i++)
@@ -22,25 +22,35 @@ namespace RPSLS
             }
             int userInput = Int32.Parse(Console.ReadLine());
             
-            if (userInput == gestures.gestures[0].value) 
+            if (userInput == 0) 
             {
                 UseRock();
+                return gestures.gestures[0];
             }
-            else if (userInput == gestures.gestures[1].value) 
+            else if (userInput == 1) 
             {
                 UsePaper();
+                return gestures.gestures[1];
             }
-            else if (userInput == gestures.gestures[2].value) 
+            else if (userInput == 2) 
             {
                 UseScissors();
+                return gestures.gestures[2];
             }
-            else if (userInput == gestures.gestures[3].value) 
+            else if (userInput == 3) 
             {
                 UseLizard();
+                return gestures.gestures[3];
             }
-            else if (userInput == gestures.gestures[4].value) 
+            else if (userInput == 4) 
             {
                 UseSpock();
+                return gestures.gestures[4];
+            }
+            else 
+            {
+                Console.WriteLine("Please make a valid selection");
+                return ChooseGesture();
             }
         }
     }

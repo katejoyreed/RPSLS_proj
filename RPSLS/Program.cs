@@ -9,7 +9,6 @@ namespace RPSLS
             Platform battleTime = new Platform();
             Movelist gestures = new Movelist();
             User player1 = new User();
-            AI computer = new AI();
             Move rock = new Move("Rock", 0);
             Move paper = new Move("Paper", 1);
             Move scissors = new Move("Scissors", 2);
@@ -22,7 +21,7 @@ namespace RPSLS
             gestures.gestures.Add(spock);
             battleTime.DisplayRules();
             player1.ChooseGesture(gestures, player1);
-            computer.ChooseGesture(gestures);
+            
         }
     }
 }
