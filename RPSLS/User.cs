@@ -14,7 +14,7 @@ namespace RPSLS
             Console.WriteLine("Enter your name");
             userName = Console.ReadLine();
         }
-        public  override Move ChooseGesture()
+        public override Move ChooseGesture()
         {
             Console.WriteLine("Select your gesture:");
             for (int i = 0; i < gestures.gestures.Count; i++)
