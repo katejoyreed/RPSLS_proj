@@ -13,7 +13,7 @@ namespace RPSLS
             score = 0;
         }
 
-        public Move ChooseGesture() 
+        public override Move ChooseGesture() 
         {
             var random = new Random();
             int index = random.Next(gestures.gestures.Count);
@@ -41,6 +41,10 @@ namespace RPSLS
             {
                 UseSpock();
                 return gestures.gestures[4];
+            }
+            else 
+            {
+                return ChooseGesture();
             }
         }
     }

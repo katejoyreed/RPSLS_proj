@@ -8,13 +8,13 @@ namespace RPSLS
     {
         //member variables
         public string gestureName;
-        public double value;
+        
 
         //ctor
-        public Move(string gestureName, double value)
+        public Move(string gestureName)
         {
             this.gestureName = gestureName;
-            this.value = value;
+            
             
         }
 

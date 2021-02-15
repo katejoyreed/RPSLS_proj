@@ -4,23 +4,23 @@ using System.Text;
 
 namespace RPSLS
 {
-    public class Player
+    public abstract class Player
     {
         //member variables
         public string userName;
         public double score;
-        
+        public Movelist gestures;
         
 
         //ctor
         public Player()
         {
             score = 0;
-            
+            gestures = new Movelist();
             
         }
         //member methods
-        
+        public abstract Move ChooseGesture();
 
         public void UseRock()
         {

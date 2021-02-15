@@ -11,24 +11,25 @@ namespace RPSLS
         public Movelist()
         {
             gestures = new List<Move>();
+            Move rock = new Move("Rock");
+            Move paper = new Move("Paper");
+            Move scissors = new Move("Scissors");
+            Move lizard = new Move("Lizard");
+            Move spock = new Move("Spock");
+            gestures.Add(rock);
+            gestures.Add(paper);
+            gestures.Add(scissors);
+            gestures.Add(lizard);
+            gestures.Add(spock);
         }
 
 
         //member methods
 
-        //create move
+       
 
-        public Move CreateMove(string gestureName, double value) //ghoul, goblin, troll, wizard, Kate
-        {                                                         //rock, paper, scissors, lizard, spock  
-           Move move = new Move(gestureName, value);
-            return move;
-        }
-        //populate movelist
-        public void PopulateMovelist(Move move) 
-        {
-            gestures.Add(move);
-        }
-
+        
+      
 
     }
 
