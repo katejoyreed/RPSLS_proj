@@ -200,10 +200,11 @@ namespace RPSLS
         }
         public void Fight(Player playerOne, Player playerTwo)
         {
-            for (int i = 0; i < ChooseRounds(); i++) // what variable catches the result of ChooseRounds?
+            int numberOfRounds = ChooseRounds();
+
+            for (int i = 0; i < numberOfRounds; i++) 
             {
-                //playerOne.ChooseGesture();
-                //playerTwo.ChooseGesture();
+                
                 CompareGestures(playerOne, playerTwo);
             }
             if (playerOne.score > playerTwo.score) 
@@ -212,12 +213,9 @@ namespace RPSLS
             }
             else if (playerOne.score < playerTwo.score)
             {
-                Console.WriteLine(playerTwo.userName + "wins the game!");
+                Console.WriteLine(playerTwo.userName + " wins the game!");
             }
-            else 
-            {
-                Console.WriteLine("It's a draw!");
-            }
+            
 
         }
         public void RunPlatform() 
